@@ -340,22 +340,60 @@ h1, h2, h3 {
   background: var(--accent);
 }
 
-.photo-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+.photo {
+  border-radius: 14px;
+  object-fit: cover;
+  border: 3px solid var(--surface);
+  box-shadow: 0 16px 32px -18px rgba(20, 23, 26, 0.4);
 }
 
-.photo-grid .photo:nth-child(1) { transform: translateY(18px); }
-.photo-grid .photo:nth-child(3) { transform: translateY(-18px); }
+/* Collage */
 
-.photo {
-  width: 100%;
-  aspect-ratio: 4 / 5;
+.photo-collage {
+  position: relative;
+  height: 480px;
+}
+
+.photo-collage .photo {
+  position: absolute;
+}
+
+.c-1 { width: 46%; aspect-ratio: 4/5; top: 0; left: 2%; z-index: 2; transform: rotate(-4deg); }
+.c-2 { width: 34%; aspect-ratio: 1/1; top: 4%; right: 4%; z-index: 1; transform: rotate(5deg); }
+.c-3 { width: 40%; aspect-ratio: 3/4; top: 38%; right: 0; z-index: 3; transform: rotate(3deg); }
+.c-4 { width: 32%; aspect-ratio: 3/4; bottom: 2%; left: 0; z-index: 2; transform: rotate(-6deg); }
+.c-5 { width: 30%; aspect-ratio: 4/3; top: 30%; left: 30%; z-index: 4; transform: rotate(-2deg); }
+.c-6 { width: 34%; aspect-ratio: 4/5; bottom: 0; right: 24%; z-index: 1; transform: rotate(4deg); }
+
+/* Dashboard visual */
+
+.dashboard-frame {
   border-radius: 16px;
-  object-fit: cover;
+  overflow: hidden;
   border: 1px solid var(--border);
-  box-shadow: 0 16px 32px -20px rgba(20, 23, 26, 0.3);
+  box-shadow: 0 20px 40px -22px rgba(20, 23, 26, 0.35);
+  background: #111;
+}
+
+.dashboard-frame img {
+  width: 100%;
+  display: block;
+}
+
+.dashboard-placeholder {
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(247, 248, 246, 0.4);
+  font-size: 0.9rem;
+}
+
+.photo-caption {
+  margin: 10px 2px 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 /* Skills */
@@ -468,6 +506,7 @@ h1, h2, h3 {
   .product-reverse .product-copy { order: 1; }
   .product-reverse .product-visual { order: 2; }
   .process-grid { grid-template-columns: 1fr 1fr; }
+  .photo-collage { height: 400px; }
 }
 
 @media (max-width: 600px) {
@@ -477,6 +516,5 @@ h1, h2, h3 {
   .nav nav a { margin-left: 0; }
   .contact-card { padding: 28px 24px; }
   .process-grid { grid-template-columns: 1fr; }
-  .photo-grid { grid-template-columns: 1fr; }
-  .photo-grid .photo { transform: none !important; }
+  .photo-collage { height: 320px; }
 }
