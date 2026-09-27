@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/inter-latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("assets/fonts/space-grotesk-latin.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #f7f8f6;
   --bg-alt: #eef1ec;
@@ -492,6 +508,57 @@ h1, h2, h3 {
   gap: 8px;
   color: var(--text-muted);
   font-size: 0.85rem;
+}
+
+.footer-inner a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer-inner a:hover {
+  color: var(--accent-ink);
+}
+
+/* Legal pages */
+
+.legal {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.legal-content {
+  max-width: 760px;
+}
+
+.legal-content h1 {
+  font-size: clamp(1.8rem, 3.6vw, 2.4rem);
+  margin-bottom: 32px;
+}
+
+.legal-content h2 {
+  font-size: 1.2rem;
+  margin: 40px 0 12px;
+}
+
+.legal-content h3 {
+  font-size: 1.02rem;
+  margin: 24px 0 10px;
+}
+
+.legal-content p,
+.legal-content li {
+  color: var(--text-muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.legal-content ul {
+  padding-left: 20px;
+  margin: 12px 0;
+}
+
+.legal-content li {
+  margin-bottom: 6px;
 }
 
 /* Responsive */
