@@ -561,6 +561,17 @@ h1, h2, h3 {
   margin-bottom: 6px;
 }
 
+.legal-copyright {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem !important;
+}
+
+.legal-copyright a {
+  color: var(--text-muted);
+}
+
 /* Responsive */
 
 @media (max-width: 860px) {
