@@ -7,12 +7,10 @@
 <meta name="description" content="Johannes Kuchmetzki — Reselling mit FlipUp, Warenwirtschaft mit FlipBase.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="noise"></div>
 
   <header class="nav">
     <div class="nav-inner">
@@ -31,11 +29,11 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Reselling &amp; Software</p>
-          <h1>Ich baue die<br>Tools, die ich<br>selbst brauche.</h1>
-          <p class="hero-text">Ich verkaufe Deals über <strong>FlipUp</strong> und verwalte meinen kompletten Warenfluss mit <strong>FlipBase</strong> — der Software, die ich dafür selbst entwickelt habe. Zwei Seiten desselben Geschäfts: verkaufen und die Systeme bauen, die das Verkaufen einfacher machen.</p>
+          <p class="eyebrow">Reselling &amp; Software · Berlin</p>
+          <h1>Deals verkaufen.<br>Systeme bauen,<br>die das einfacher machen.</h1>
+          <p class="hero-text">Mit <strong>FlipUp</strong> gebe ich anderen Zugang zu Deals, die sich weiterverkaufen lassen. Mit <strong>FlipBase</strong> habe ich mir die Software gebaut, die meinen eigenen Lagerbestand, Verkäufe und Retouren im Griff hält.</p>
           <div class="hero-actions">
-            <a class="button" href="#work">Wie das funktioniert</a>
+            <a class="button" href="#work">Wie das zusammenhängt</a>
             <a class="button button-ghost" href="#contact">Kontakt</a>
           </div>
         </div>
@@ -43,16 +41,23 @@
           <div class="portrait-frame">
             <img src="assets/portrait.jpg" alt="Portrait von Johannes Kuchmetzki">
           </div>
-          <div class="portrait-tag">Wien · Reseller &amp; Dev</div>
+          <div class="portrait-tag">Berlin · Reseller &amp; Dev</div>
         </div>
       </div>
     </section>
 
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>eBay</span><span>Amazon</span><span>Kaufland</span><span>Retouren</span><span>Lager</span>
+        <span>eBay</span><span>Amazon</span><span>Kaufland</span><span>Retouren</span><span>Lager</span>
+      </div>
+    </div>
+
     <section id="work" class="section intro">
       <div class="container">
         <p class="section-label">Wie beides zusammenhängt</p>
-        <h2>Verkaufen und Software sind bei mir kein Widerspruch.</h2>
-        <p class="lede">Auf der einen Seite stehe ich als Reseller täglich im Markt: Deals einkaufen, Preise beobachten, Ware bewegen. Auf der anderen Seite sitze ich am Code, weil mich genau diese Probleme genervt haben, bis ich sie selbst gelöst habe. FlipUp und FlipBase sind daraus entstanden — nicht als Konzept, sondern weil ich sie jeden Tag selbst benutze.</p>
+        <h2>Ich verkaufe selbst — und baue mir die Werkzeuge dafür.</h2>
+        <p class="lede">Als Reseller kaufe ich Deals ein und verkaufe sie über eBay, Kaufland und Co. weiter. Den Papierkram und Überblick dazu — Lager, Verkäufe, Retouren — hat mir irgendwann keine fertige Software mehr sauber abgenommen. Also habe ich FlipBase selbst gebaut. FlipUp und FlipBase sind deshalb kein Konzept auf dem Papier, sondern das, was bei mir täglich läuft.</p>
       </div>
     </section>
 
@@ -61,21 +66,17 @@
         <div class="product-copy">
           <p class="product-label">01 — Reselling</p>
           <h2>FlipUp</h2>
-          <p class="product-desc">FlipUp ist meine Reselling-Gruppe. Ich sichte laufend Deals und spiele sie in die Gruppe rein — Produkte, die Mitglieder günstig einkaufen und anschließend über eBay, Kaufland oder andere Marktplätze mit Gewinn weiterverkaufen können. Statt selbst stundenlang nach Deals zu suchen, bekommen die Leute den Vorsprung direkt von mir.</p>
+          <p class="product-desc">FlipUp ist meine Reselling-Gruppe. Ich suche laufend Deals raus und teile sie mit der Gruppe — Ware, die sich günstig einkaufen und über eBay, Kaufland oder andere Marktplätze mit Gewinn weiterverkaufen lässt. Wer mitmacht, spart sich die Zeit fürs Suchen und bekommt die Deals direkt von mir.</p>
           <ul class="product-points">
-            <li>Laufend neue, geprüfte Deals — kein Zufallsfund, sondern kuratiert</li>
+            <li>Laufend geprüfte Deals statt Zufallsfunde</li>
             <li>Weiterverkauf über eBay, Kaufland &amp; Co.</li>
-            <li>Gedacht für alle, die nebenbei mit Reselling Geld verdienen wollen</li>
+            <li>Für alle, die nebenbei mit Reselling Geld verdienen wollen</li>
           </ul>
         </div>
-        <div class="product-visual product-visual-flipup" aria-hidden="true">
-          <div class="stat-card">
-            <span class="stat-label">Deal reingekommen</span>
-            <span class="stat-value">+1</span>
-          </div>
-          <div class="stat-card stat-card-alt">
-            <span class="stat-label">Weiterverkauf</span>
-            <span class="stat-value">eBay · Kaufland</span>
+        <div class="product-visual">
+          <div class="photo-stack">
+            <img src="assets/flipup/deal-1.webp" alt="Palette mit eingekauften Deal-Produkten" class="photo photo-a">
+            <img src="assets/flipup/deal-4.webp" alt="Amazon-Pakete im Lager" class="photo photo-b">
           </div>
         </div>
       </div>
@@ -83,24 +84,20 @@
 
     <section id="flipbase" class="section product product-reverse alt">
       <div class="container product-grid">
-        <div class="product-visual product-visual-flipbase" aria-hidden="true">
-          <div class="stat-card">
-            <span class="stat-label">Lagerbestand</span>
-            <span class="stat-value">Live im Blick</span>
-          </div>
-          <div class="stat-card stat-card-alt">
-            <span class="stat-label">Retoure erkannt</span>
-            <span class="stat-value">→ automatisch neu gelistet</span>
+        <div class="product-visual">
+          <div class="photo-stack">
+            <img src="assets/flipup/deal-2.webp" alt="Versandkartons für eBay-Bestellungen" class="photo photo-a">
+            <img src="assets/flipup/deal-5.webp" alt="Gelagerte Ware bereit zum Versand" class="photo photo-b">
           </div>
         </div>
         <div class="product-copy">
           <p class="product-label">02 — Software</p>
           <h2>FlipBase</h2>
-          <p class="product-desc">FlipBase ist mein eigenes Warenwirtschaftssystem für das Reselling-Geschäft. Damit behalte ich meinen kompletten Lagerbestand und alle Verkäufe im Überblick, statt sie über mehrere Marktplätze verstreut zu verwalten. Kommt eine Retoure zurück, landet das Produkt nicht in einer Schublade, sondern wird direkt über FlipBase wieder gelistet — automatisch, statt manuell über eBay oder Kaufland.</p>
+          <p class="product-desc">FlipBase ist mein eigenes Warenwirtschaftssystem fürs Reselling. Damit habe ich meinen kompletten Lagerbestand und alle Verkäufe an einem Ort im Blick, statt sie über mehrere Marktplätze verstreut zu verwalten. Kommt eine Retoure zurück, wird sie nicht erst wieder manuell auf eBay oder Kaufland eingestellt — FlipBase listet sie automatisch neu.</p>
           <ul class="product-points">
             <li>Zentraler Überblick über Lager &amp; Verkäufe</li>
             <li>Retouren werden automatisch neu gelistet</li>
-            <li>Gebaut aus echtem Bedarf im eigenen Tagesgeschäft</li>
+            <li>Gebaut aus dem eigenen Tagesgeschäft heraus</li>
           </ul>
         </div>
       </div>
@@ -124,10 +121,11 @@
         <div>
           <p class="section-label">Kontakt</p>
           <h2>Lust auf einen Deal oder ein Gespräch über FlipBase?</h2>
-          <p class="lede">Egal ob du bei FlipUp mitmachen willst oder wissen möchtest, wie FlipBase deinen eigenen Reselling-Alltag entlasten könnte — schreib mir einfach.</p>
+          <p class="lede">Ob du bei FlipUp mitmachen willst oder wissen möchtest, wie FlipBase deinen eigenen Reselling-Alltag entlasten könnte — schreib mir einfach.</p>
         </div>
         <div class="contact-card">
           <a class="contact-email" href="mailto:johanneskuchmetzki@gmail.com">johanneskuchmetzki@gmail.com</a>
+          <button class="copy-button" type="button" data-email="johanneskuchmetzki@gmail.com">E-Mail kopieren</button>
           <span class="contact-note">Antwort meist innerhalb von 1–2 Tagen</span>
         </div>
       </div>
@@ -141,6 +139,25 @@
       <span>FlipUp · FlipBase</span>
     </div>
   </footer>
+
+  <script>
+    var copyBtn = document.querySelector('.copy-button');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        var email = copyBtn.getAttribute('data-email');
+        var done = function () {
+          var original = copyBtn.textContent;
+          copyBtn.textContent = 'Kopiert!';
+          setTimeout(function () { copyBtn.textContent = original; }, 1800);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(done).catch(done);
+        } else {
+          done();
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
