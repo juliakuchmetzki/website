@@ -3,88 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Johannes Kuchmetzki — Reseller & Software-Entwickler</title>
-<meta name="description" content="Portfolio von Johannes Kuchmetzki: Reseller und Software-Entwickler.">
+<title>Johannes Kuchmetzki</title>
+<meta name="description" content="Johannes Kuchmetzki — Reselling mit FlipUp, Warenwirtschaft mit FlipBase.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="noise"></div>
+
   <header class="nav">
     <div class="nav-inner">
-      <span class="nav-brand">Johannes Kuchmetzki</span>
+      <a class="nav-brand" href="#top">Johannes Kuchmetzki</a>
       <nav>
-        <a href="#about">Über mich</a>
-        <a href="#projects">Projekte</a>
-        <a href="#skills">Skills</a>
+        <a href="#work">Arbeit</a>
+        <a href="#flipup">FlipUp</a>
+        <a href="#flipbase">FlipBase</a>
         <a href="#contact">Kontakt</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
+
     <section class="hero">
-      <div class="container">
-        <h1>Johannes Kuchmetzki</h1>
-        <p class="subtitle">Reseller &amp; Software-Entwickler</p>
-        <p class="hero-text">Ich verbinde technisches Know-how mit unternehmerischem Denken — von der Entwicklung eigener Software bis zum Vertrieb von Produkten.</p>
-        <a class="button" href="#contact">Kontakt aufnehmen</a>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="container">
-        <h2>Über mich</h2>
-        <p>Ich bin Johannes Kuchmetzki und arbeite an der Schnittstelle zwischen Softwareentwicklung und Produktvertrieb. Als Reseller verkaufe ich eigene und Partnerprodukte, als Entwickler baue ich die technischen Lösungen, die dahinterstehen. Diese Kombination erlaubt mir, Ideen von der ersten Zeile Code bis zum fertigen Angebot am Markt zu begleiten.</p>
-      </div>
-    </section>
-
-    <section id="projects" class="section alt">
-      <div class="container">
-        <h2>Projekte</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Projekt 1</h3>
-            <p>Platzhalter — hier kann später ein Projekt beschrieben werden.</p>
-          </article>
-          <article class="card">
-            <h3>Projekt 2</h3>
-            <p>Platzhalter — hier kann später ein weiteres Projekt beschrieben werden.</p>
-          </article>
-          <article class="card">
-            <h3>Projekt 3</h3>
-            <p>Platzhalter — hier kann später ein weiteres Projekt beschrieben werden.</p>
-          </article>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Reselling &amp; Software</p>
+          <h1>Ich baue die<br>Tools, die ich<br>selbst brauche.</h1>
+          <p class="hero-text">Ich verkaufe Deals über <strong>FlipUp</strong> und verwalte meinen kompletten Warenfluss mit <strong>FlipBase</strong> — der Software, die ich dafür selbst entwickelt habe. Zwei Seiten desselben Geschäfts: verkaufen und die Systeme bauen, die das Verkaufen einfacher machen.</p>
+          <div class="hero-actions">
+            <a class="button" href="#work">Wie das funktioniert</a>
+            <a class="button button-ghost" href="#contact">Kontakt</a>
+          </div>
+        </div>
+        <div class="hero-portrait">
+          <div class="portrait-frame">
+            <img src="assets/portrait.jpg" alt="Portrait von Johannes Kuchmetzki">
+          </div>
+          <div class="portrait-tag">Wien · Reseller &amp; Dev</div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section id="work" class="section intro">
       <div class="container">
-        <h2>Skills &amp; Tools</h2>
+        <p class="section-label">Wie beides zusammenhängt</p>
+        <h2>Verkaufen und Software sind bei mir kein Widerspruch.</h2>
+        <p class="lede">Auf der einen Seite stehe ich als Reseller täglich im Markt: Deals einkaufen, Preise beobachten, Ware bewegen. Auf der anderen Seite sitze ich am Code, weil mich genau diese Probleme genervt haben, bis ich sie selbst gelöst habe. FlipUp und FlipBase sind daraus entstanden — nicht als Konzept, sondern weil ich sie jeden Tag selbst benutze.</p>
+      </div>
+    </section>
+
+    <section id="flipup" class="section product">
+      <div class="container product-grid">
+        <div class="product-copy">
+          <p class="product-label">01 — Reselling</p>
+          <h2>FlipUp</h2>
+          <p class="product-desc">FlipUp ist meine Reselling-Gruppe. Ich sichte laufend Deals und spiele sie in die Gruppe rein — Produkte, die Mitglieder günstig einkaufen und anschließend über eBay, Kaufland oder andere Marktplätze mit Gewinn weiterverkaufen können. Statt selbst stundenlang nach Deals zu suchen, bekommen die Leute den Vorsprung direkt von mir.</p>
+          <ul class="product-points">
+            <li>Laufend neue, geprüfte Deals — kein Zufallsfund, sondern kuratiert</li>
+            <li>Weiterverkauf über eBay, Kaufland &amp; Co.</li>
+            <li>Gedacht für alle, die nebenbei mit Reselling Geld verdienen wollen</li>
+          </ul>
+        </div>
+        <div class="product-visual product-visual-flipup" aria-hidden="true">
+          <div class="stat-card">
+            <span class="stat-label">Deal reingekommen</span>
+            <span class="stat-value">+1</span>
+          </div>
+          <div class="stat-card stat-card-alt">
+            <span class="stat-label">Weiterverkauf</span>
+            <span class="stat-value">eBay · Kaufland</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flipbase" class="section product product-reverse alt">
+      <div class="container product-grid">
+        <div class="product-visual product-visual-flipbase" aria-hidden="true">
+          <div class="stat-card">
+            <span class="stat-label">Lagerbestand</span>
+            <span class="stat-value">Live im Blick</span>
+          </div>
+          <div class="stat-card stat-card-alt">
+            <span class="stat-label">Retoure erkannt</span>
+            <span class="stat-value">→ automatisch neu gelistet</span>
+          </div>
+        </div>
+        <div class="product-copy">
+          <p class="product-label">02 — Software</p>
+          <h2>FlipBase</h2>
+          <p class="product-desc">FlipBase ist mein eigenes Warenwirtschaftssystem für das Reselling-Geschäft. Damit behalte ich meinen kompletten Lagerbestand und alle Verkäufe im Überblick, statt sie über mehrere Marktplätze verstreut zu verwalten. Kommt eine Retoure zurück, landet das Produkt nicht in einer Schublade, sondern wird direkt über FlipBase wieder gelistet — automatisch, statt manuell über eBay oder Kaufland.</p>
+          <ul class="product-points">
+            <li>Zentraler Überblick über Lager &amp; Verkäufe</li>
+            <li>Retouren werden automatisch neu gelistet</li>
+            <li>Gebaut aus echtem Bedarf im eigenen Tagesgeschäft</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills">
+      <div class="container">
+        <p class="section-label">Skillset</p>
         <ul class="tags">
+          <li>Reselling &amp; Deal-Sourcing</li>
           <li>Softwareentwicklung</li>
-          <li>Produktvertrieb</li>
-          <li>Business Development</li>
-          <li>Web-Technologien</li>
-          <li>Kundenberatung</li>
+          <li>Warenwirtschaft &amp; Automatisierung</li>
+          <li>Marktplatz-Vertrieb</li>
+          <li>Retourenmanagement</li>
         </ul>
       </div>
     </section>
 
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Kontakt</h2>
-        <p>Du möchtest mit mir arbeiten oder hast eine Anfrage? Melde dich gerne.</p>
-        <div class="contact-links">
-          <a href="mailto:johanneskuchmetzki@gmail.com">johanneskuchmetzki@gmail.com</a>
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-label">Kontakt</p>
+          <h2>Lust auf einen Deal oder ein Gespräch über FlipBase?</h2>
+          <p class="lede">Egal ob du bei FlipUp mitmachen willst oder wissen möchtest, wie FlipBase deinen eigenen Reselling-Alltag entlasten könnte — schreib mir einfach.</p>
+        </div>
+        <div class="contact-card">
+          <a class="contact-email" href="mailto:johanneskuchmetzki@gmail.com">johanneskuchmetzki@gmail.com</a>
+          <span class="contact-note">Antwort meist innerhalb von 1–2 Tagen</span>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Johannes Kuchmetzki</p>
+    <div class="container footer-inner">
+      <span>© 2026 Johannes Kuchmetzki</span>
+      <span>FlipUp · FlipBase</span>
     </div>
   </footer>
+
 </body>
 </html>
