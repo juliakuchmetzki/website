@@ -308,6 +308,16 @@ h1, h2, h3 {
   border: 1px solid var(--border);
 }
 
+.product-heading-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.15s ease;
+}
+
+.product-heading-link:hover {
+  color: var(--accent-ink);
+}
+
 .product h2 {
   font-size: clamp(1.9rem, 3.6vw, 2.5rem);
 }
