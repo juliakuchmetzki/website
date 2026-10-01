@@ -330,6 +330,30 @@ h1, h2, h3 {
   margin-bottom: 20px;
 }
 
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.intro-photo {
+  margin: 0;
+}
+
+.intro-photo img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 30px 60px -30px rgba(31, 111, 92, 0.35);
+}
+
+.intro-photo figcaption {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
 .lede {
   color: var(--text-muted);
   font-size: 1.05rem;
@@ -718,6 +742,7 @@ h1, h2, h3 {
 @media (max-width: 860px) {
   .hero-grid,
   .product-grid,
+  .intro-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
