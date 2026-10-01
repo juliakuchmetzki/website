@@ -7,11 +7,11 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
-  <header class="nav">
+  <header class="nav" id="site-nav">
     <div class="nav-inner">
       <a class="nav-brand" href="index.html">Johannes Kuchmetzki</a>
       <nav>
@@ -86,11 +86,44 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Johannes Kuchmetzki</p>
+        <p class="footer-tagline">Reseller &amp; Software-Entwickler aus Berlin. Baut FlipUp und FlipBase aus dem eigenen Tagesgeschäft heraus.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Projekte</p>
+        <ul class="footer-links">
+          <li><a href="https://flipupde.de" target="_blank" rel="noopener">FlipUp</a></li>
+          <li><a href="https://flipbase.xyz" target="_blank" rel="noopener">FlipBase</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Rechtliches</p>
+        <ul class="footer-links">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
       <span>© 2026 Johannes Kuchmetzki</span>
-      <span><a href="index.html#contact">Kontakt</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+      <span>Brunnenstr. 28 · 10119 Berlin · Deutschland</span>
     </div>
   </footer>
+
+  <script>
+    var siteNav = document.getElementById('site-nav');
+    function updateNavScroll() {
+      if (window.scrollY > 24) {
+        siteNav.classList.add('scrolled');
+      } else {
+        siteNav.classList.remove('scrolled');
+      }
+    }
+    updateNavScroll();
+    window.addEventListener('scroll', updateNavScroll, { passive: true });
+  </script>
 
 </body>
 </html>

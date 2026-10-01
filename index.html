@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,7 +34,7 @@
 </head>
 <body>
 
-  <header class="nav">
+  <header class="nav" id="site-nav">
     <div class="nav-inner">
       <a class="nav-brand" href="#top">Johannes Kuchmetzki</a>
       <nav>
@@ -52,7 +52,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Reselling &amp; Software · Berlin</p>
-          <h1>Deals verkaufen.<br>Systeme bauen,<br>die das einfacher machen.</h1>
+          <h1>Deals verkaufen.<br>Systeme bauen,<br>die das <span class="accent-script">einfacher</span> machen.</h1>
           <p class="hero-text">Mit <strong>FlipUp</strong> gebe ich anderen Reselling-Zugang zu Deals, die sich mit Gewinn weiterverkaufen lassen. Und weil mir dabei irgendwann der Überblick über Lager, Verkäufe und Retouren gefehlt hat, habe ich mit <strong>FlipBase</strong> gleich die passende Software dazu gebaut.</p>
           <div class="hero-actions">
             <a class="button" href="#work">Wie das zusammenhängt</a>
@@ -69,6 +69,7 @@
     </section>
 
     <section id="work" class="section intro">
+      <div class="section-divider"></div>
       <div class="container">
         <p class="section-label">Wie beides zusammenhängt</p>
         <h2>Ich verkaufe selbst, und baue mir gleichzeitig die Werkzeuge dafür.</h2>
@@ -77,6 +78,7 @@
     </section>
 
     <section class="section process alt">
+      <div class="section-divider"></div>
       <div class="container">
         <p class="section-label">Vom Deal zum Verkauf</p>
         <h2>So läuft ein Deal bei mir durch.</h2>
@@ -106,6 +108,7 @@
     </section>
 
     <section id="flipup" class="section product">
+      <div class="section-divider"></div>
       <div class="container product-grid">
         <div class="product-copy">
           <p class="product-label">01, Reselling</p>
@@ -134,6 +137,7 @@
     </section>
 
     <section id="flipbase" class="section product product-reverse alt">
+      <div class="section-divider"></div>
       <div class="container product-grid">
         <div class="product-copy">
           <p class="product-label">02, Software</p>
@@ -158,6 +162,7 @@
     </section>
 
     <section id="contact" class="section contact">
+      <div class="section-divider"></div>
       <div class="container contact-grid">
         <div>
           <p class="section-label">Kontakt</p>
@@ -175,11 +180,44 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Johannes Kuchmetzki</p>
+        <p class="footer-tagline">Reseller &amp; Software-Entwickler aus Berlin. Baut FlipUp und FlipBase aus dem eigenen Tagesgeschäft heraus.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Projekte</p>
+        <ul class="footer-links">
+          <li><a href="https://flipupde.de" target="_blank" rel="noopener">FlipUp</a></li>
+          <li><a href="https://flipbase.xyz" target="_blank" rel="noopener">FlipBase</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Rechtliches</p>
+        <ul class="footer-links">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
       <span>© 2026 Johannes Kuchmetzki</span>
-      <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+      <span>Brunnenstr. 28 · 10119 Berlin · Deutschland</span>
     </div>
   </footer>
+
+  <script>
+    var siteNav = document.getElementById('site-nav');
+    function updateNavScroll() {
+      if (window.scrollY > 24) {
+        siteNav.classList.add('scrolled');
+      } else {
+        siteNav.classList.remove('scrolled');
+      }
+    }
+    updateNavScroll();
+    window.addEventListener('scroll', updateNavScroll, { passive: true });
+  </script>
 
   <script>
     var copyBtn = document.querySelector('.copy-button');
