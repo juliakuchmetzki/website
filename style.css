@@ -337,22 +337,6 @@ h1, h2, h3 {
   align-items: center;
 }
 
-.intro-photo {
-  margin: 0;
-}
-
-.intro-photo img {
-  width: 100%;
-  border-radius: 20px;
-  display: block;
-  box-shadow: 0 30px 60px -30px rgba(31, 111, 92, 0.35);
-}
-
-.intro-photo figcaption {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-  margin-top: 12px;
-}
 
 .lede {
   color: var(--text-muted);
