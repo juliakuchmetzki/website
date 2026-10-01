@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -163,17 +163,27 @@
 
     <section id="contact" class="section contact">
       <div class="section-divider"></div>
-      <div class="container contact-grid">
-        <div>
-          <p class="section-label">Kontakt</p>
-          <h2>Lust auf einen Deal oder ein Gespräch über FlipBase?</h2>
-          <p class="lede">Ob du bei FlipUp mitmachen willst oder wissen möchtest, wie FlipBase deinen eigenen Reselling-Alltag entlasten könnte, schreib mir einfach.</p>
-        </div>
-        <div class="contact-card">
-          <a class="contact-email" href="mailto:johanneskuchmetzki@gmail.com" target="_top" rel="noopener">johanneskuchmetzki@gmail.com</a>
-          <button class="copy-button" type="button" data-email="johanneskuchmetzki@gmail.com">E-Mail kopieren</button>
-          <span class="contact-note">Antwort meist innerhalb von 1–2 Tagen</span>
-        </div>
+      <div class="container contact-center">
+        <p class="section-label">Kontakt</p>
+        <h2>Lust auf einen Deal oder ein Gespräch über FlipBase?</h2>
+        <p class="lede">Ob du bei FlipUp mitmachen willst oder wissen möchtest, wie FlipBase deinen eigenen Reselling-Alltag entlasten könnte, schreib mir einfach.</p>
+
+        <form class="contact-form" id="contact-form">
+          <div class="contact-form-row">
+            <div>
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" placeholder="Dein Name" required>
+            </div>
+            <div>
+              <label for="cf-email">E-Mail</label>
+              <input type="email" id="cf-email" placeholder="deine@email.de" required>
+            </div>
+          </div>
+          <label for="cf-message">Nachricht</label>
+          <textarea id="cf-message" placeholder="Worum geht's?" required></textarea>
+          <button type="submit" class="button">Nachricht senden</button>
+        </form>
+        <p class="contact-note">Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht an johanneskuchmetzki@gmail.com · Antwort meist innerhalb von 1–2 Tagen</p>
       </div>
     </section>
 
@@ -220,20 +230,15 @@
   </script>
 
   <script>
-    var copyBtn = document.querySelector('.copy-button');
-    if (copyBtn) {
-      copyBtn.addEventListener('click', function () {
-        var email = copyBtn.getAttribute('data-email');
-        var done = function () {
-          var original = copyBtn.textContent;
-          copyBtn.textContent = 'Kopiert!';
-          setTimeout(function () { copyBtn.textContent = original; }, 1800);
-        };
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(email).then(done).catch(done);
-        } else {
-          done();
-        }
+    var contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('cf-name').value;
+        var email = document.getElementById('cf-email').value;
+        var message = document.getElementById('cf-message').value;
+        var body = message + '\n\n— ' + name + ' (' + email + ')';
+        window.location.href = 'mailto:johanneskuchmetzki@gmail.com?subject=' + encodeURIComponent('Kontakt über johanneskuchmetzki.de') + '&body=' + encodeURIComponent(body);
       });
     }
   </script>
