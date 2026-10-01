@@ -460,6 +460,12 @@ h1, h2, h3 {
 .c-5 { width: 30%; aspect-ratio: 4/3; top: 30%; left: 30%; z-index: 4; transform: rotate(-2deg); }
 .c-6 { width: 34%; aspect-ratio: 4/5; bottom: 0; right: 24%; z-index: 1; transform: rotate(4deg); }
 
+.collage-alt .w-1 { width: 44%; aspect-ratio: 3/4; top: 0; right: 0; z-index: 2; transform: rotate(3deg); }
+.collage-alt .w-2 { width: 28%; aspect-ratio: 1/1; top: 10%; left: 0; z-index: 3; transform: rotate(-4deg); }
+.collage-alt .w-3 { width: 42%; aspect-ratio: 4/3; top: 36%; left: 8%; z-index: 1; transform: rotate(2deg); }
+.collage-alt .w-4 { width: 30%; aspect-ratio: 4/5; bottom: 0; right: 32%; z-index: 4; transform: rotate(-3deg); }
+.collage-alt .w-5 { width: 26%; aspect-ratio: 3/4; bottom: 4%; right: 0; z-index: 2; transform: rotate(5deg); }
+
 /* Dashboard visual */
 
 .dashboard-frame {
