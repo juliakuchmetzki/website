@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -169,21 +169,25 @@
         <p class="lede">Ob du bei FlipUp mitmachen willst oder wissen möchtest, wie FlipBase deinen eigenen Reselling-Alltag entlasten könnte, schreib mir einfach.</p>
 
         <form class="contact-form" id="contact-form">
+          <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY_HIER_EINFUEGEN">
+          <input type="hidden" name="subject" value="Kontakt über johanneskuchmetzki.de">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <div class="contact-form-row">
             <div>
               <label for="cf-name">Name</label>
-              <input type="text" id="cf-name" placeholder="Dein Name" required>
+              <input type="text" id="cf-name" name="name" placeholder="Dein Name" required>
             </div>
             <div>
               <label for="cf-email">E-Mail</label>
-              <input type="email" id="cf-email" placeholder="deine@email.de" required>
+              <input type="email" id="cf-email" name="email" placeholder="deine@email.de" required>
             </div>
           </div>
           <label for="cf-message">Nachricht</label>
-          <textarea id="cf-message" placeholder="Worum geht's?" required></textarea>
-          <button type="submit" class="button">Nachricht senden</button>
+          <textarea id="cf-message" name="message" placeholder="Worum geht's?" required></textarea>
+          <button type="submit" class="button" id="cf-submit">Nachricht senden</button>
+          <p class="contact-form-status" id="cf-status" role="status"></p>
         </form>
-        <p class="contact-note">Öffnet dein E-Mail-Programm mit vorausgefüllter Nachricht an johanneskuchmetzki@gmail.com · Antwort meist innerhalb von 1–2 Tagen</p>
+        <p class="contact-note">Deine Nachricht geht direkt an johanneskuchmetzki@gmail.com · Antwort meist innerhalb von 1–2 Tagen</p>
       </div>
     </section>
 
@@ -234,11 +238,40 @@
     if (contactForm) {
       contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        var name = document.getElementById('cf-name').value;
-        var email = document.getElementById('cf-email').value;
-        var message = document.getElementById('cf-message').value;
-        var body = message + '\n\n— ' + name + ' (' + email + ')';
-        window.location.href = 'mailto:johanneskuchmetzki@gmail.com?subject=' + encodeURIComponent('Kontakt über johanneskuchmetzki.de') + '&body=' + encodeURIComponent(body);
+        var statusEl = document.getElementById('cf-status');
+        var submitBtn = document.getElementById('cf-submit');
+        var formData = new FormData(contactForm);
+        var object = {};
+        formData.forEach(function (value, key) { object[key] = value; });
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Wird gesendet …';
+        statusEl.textContent = '';
+        statusEl.className = 'contact-form-status';
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(object)
+        })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data.success) {
+              contactForm.reset();
+              statusEl.textContent = 'Danke, deine Nachricht ist angekommen!';
+              statusEl.className = 'contact-form-status success';
+            } else {
+              throw new Error(data.message || 'Unbekannter Fehler');
+            }
+          })
+          .catch(function () {
+            statusEl.textContent = 'Senden hat nicht geklappt. Schreib mir gerne direkt an johanneskuchmetzki@gmail.com.';
+            statusEl.className = 'contact-form-status error';
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Nachricht senden';
+          });
       });
     }
   </script>

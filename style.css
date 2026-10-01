@@ -577,6 +577,15 @@ h1, h2, h3 {
   font-size: 0.85rem;
 }
 
+.contact-form-status {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+  min-height: 1.3em;
+}
+
+.contact-form-status.success { color: var(--accent-ink); }
+.contact-form-status.error { color: #b3261e; }
+
 /* Footer */
 
 .footer {
