@@ -278,19 +278,24 @@ h1, h2, h3 {
 
 .process-step {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.process-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .process-icon {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
 }
 
 .process-step h3 {
   font-size: 1.15rem;
-  margin-bottom: 6px;
 }
 
 .process-body {
