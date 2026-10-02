@@ -299,7 +299,8 @@ h1, h2, h3 {
 }
 
 .process-body {
-  border-left: 2px solid var(--accent);
+  margin-left: 16px;
+  border-left: 1px solid var(--accent);
   padding-left: 18px;
 }
 
